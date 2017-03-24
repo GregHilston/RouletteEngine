@@ -1,5 +1,5 @@
-from pick import Pick
-from roulette import Roulette
+from Roulette.pick import Pick
+from Roulette.roulette import Roulette
 from algorithm import Algorithm
 
 

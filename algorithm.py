@@ -1,4 +1,4 @@
-from pick import Pick
+from Roulette.pick import Pick
 
 
 class Algorithm():
