@@ -25,7 +25,7 @@ class RouletteEngine:
 				if(guess == actual):
 					round_correct += 1
 
-			print(f"Round {round}: {round_correct} out of {self._number_of_rounds_per_run}")
+			print(f"Run {run}: {round_correct} out of {self._number_of_rounds_per_run}")
 			total_correct += round_correct
-		print(f"Average: {total_correct / self._number_of_runs} out of {self._number_of_rounds_per_run}")
-		print(f"Total: {total_correct} out of {self._number_of_runs * self._number_of_rounds_per_run}")
+		print(f"Average Correct Guesses: {total_correct / self._number_of_runs} out of {self._number_of_rounds_per_run} guesses per round")
+		print(f"Total Correct Guesses: {total_correct} out of {self._number_of_runs * self._number_of_rounds_per_run} guesses")
