@@ -15,13 +15,10 @@ def main():
     number_of_runs = int(sys.argv[1])
     number_of_rounds_per_run = int(sys.argv[2])
 
-    always_black_algorithm = AlwaysBlackAlgorithm()
-    roulette_engine = RouletteEngine(number_of_runs, number_of_rounds_per_run, always_black_algorithm)
-    roulette_engine.start()
+    algos = [AlwaysBlackAlgorithm(), SameAsPrevAlgorithm(), FiftyCentAlgorithm()]
 
-    fifty_cent_algorithm = FiftyCentAlgorithm()
-    roulette_engine = RouletteEngine(number_of_runs, number_of_rounds_per_run, fifty_cent_algorithm)
-    roulette_engine.start()
+    for algo in algos:
+        RouletteEngine(number_of_runs, number_of_rounds_per_run, algo).start()
 
 
 if __name__ == "__main__":
