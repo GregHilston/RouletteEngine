@@ -21,7 +21,7 @@ def main():
     roulette_engine.start()
 
     same_as_prev_algorithm = SameAsPrevAlgorithm()
-    roulette_engine = RouletteEnginer(number_of_runs, number_of_rounds_per_run, same_as_prev_algorithm)
+    roulette_engine = RouletteEngine(number_of_runs, number_of_rounds_per_run, same_as_prev_algorithm)
     roulette_engine.start()
 
 
