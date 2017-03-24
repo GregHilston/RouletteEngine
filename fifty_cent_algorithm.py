@@ -21,7 +21,7 @@ class FiftyCentAlgorithm(Algorithm):
 
         if previous == Pick.BLACK:
             self.black += 1
-        else if previous == Pick.RED:
+        elif previous == Pick.RED:
             self.red += 1
         else:
             raise Exception("Death gotta be easy, ’cause life is hard. It’ll leave you physically, mentally and emotionally scarred.")
