@@ -1,4 +1,4 @@
-from pick import Pick
+from Roulette.pick import Pick
 from algorithm import Algorithm
 
 class SameAsPrevAlgorithm(Algorithm):
