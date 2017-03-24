@@ -3,9 +3,20 @@ sys.path.append("Roulette") # Adds the sub dir so we can import it
 from roulette_engine import RouletteEngine
 from always_black_algorithm import AlwaysBlackAlgorithm
 
+
+def usage():
+	sys.exit("usage: $ python3 app.py [number of runs] [number of rounds per runs]")
+
+
 def main():
+	if(len(sys.argv)) != 3:
+		usage()
+
+	number_of_runs = int(sys.argv[1])
+	number_of_rounds_per_run = int(sys.argv[2])
+
 	always_black_algorithm = AlwaysBlackAlgorithm()
-	roulette_engine = RouletteEngine(3, 3, always_black_algorithm)
+	roulette_engine = RouletteEngine(number_of_runs, number_of_rounds_per_run, always_black_algorithm)
 	roulette_engine.start()
 
 
