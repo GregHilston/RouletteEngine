@@ -3,6 +3,7 @@ sys.path.append("Roulette") # Adds the sub dir so we can import it
 from roulette_engine import RouletteEngine
 from always_black_algorithm import AlwaysBlackAlgorithm
 from same_as_prev_algorithm import SameAsPrevAlgorithm
+from fifty_cent_algorithm import FiftyCentAlgorithm
 
 
 def usage():
@@ -24,6 +25,11 @@ def main():
     roulette_engine = RouletteEngine(number_of_runs, number_of_rounds_per_run, same_as_prev_algorithm)
     roulette_engine.start()
 
+    fifty_cent_algorithm = FiftyCentAlgorithm()
+    roulette_engine = RouletteEngine(number_of_runs, number_of_rounds_per_run, fifty_cent_algorithm)
+    roulette_engine.start()
+
 
 if __name__ == "__main__":
     main()
+
