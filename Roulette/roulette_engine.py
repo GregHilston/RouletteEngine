@@ -21,6 +21,7 @@ class RouletteEngine:
             for round in range(self._number_of_rounds_per_run):
                 guess = self._algorithm.guess(prev)
                 actual = self._roulette.next()
+                prev = actual
 
                 if(guess == actual):
                     round_correct += 1
