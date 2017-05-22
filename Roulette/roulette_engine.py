@@ -12,6 +12,8 @@ class RouletteEngine:
 
 
     def start(self):
+        print(f"-- {self._algorithm.__class__.__name__} --")
+
         total_correct = 0
         prev = Pick.NONE
 
@@ -29,4 +31,4 @@ class RouletteEngine:
             print(f"Run {run}: {round_correct} out of {self._number_of_rounds_per_run}")
             total_correct += round_correct
         print(f"Average Correct Guesses: {total_correct / self._number_of_runs} out of {self._number_of_rounds_per_run} guesses per round")
-        print(f"Total Correct Guesses: {total_correct} out of {self._number_of_runs * self._number_of_rounds_per_run} guesses")
+        print(f"Total Correct Guesses: {total_correct} out of {self._number_of_runs * self._number_of_rounds_per_run} guesses\n")
